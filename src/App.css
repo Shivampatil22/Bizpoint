@@ -140,7 +140,7 @@
   max-height: 320px;
   background-color: #e0ffff;
   border-radius: 10px;
-  padding: 2em 1.2em;
+  padding: 2.4em 1.2em;
   margin: 12px;
   text-decoration: none;
   z-index: 0;
@@ -181,6 +181,21 @@
 }
 .card:hover{
   scale: 1.05;
+}
+.read_more{
+  color: #161515;
+  font-weight: 600;
+  font-size: large;
+  position: absolute;
+  margin-bottom: 1rem;
+  transform: translateY(-30px);
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.card:hover .read_more{
+    transform: translateY(0);
+      opacity: 1;
 }
 
 
@@ -239,6 +254,7 @@ background: rgb(0, 133, 255);
 .glow:focus{
   border: 2px solid #006fff;
 }
+
 
 
 

@@ -1,14 +1,11 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import "../Carousal.css"
-import img1 from "../assets/carousal_graphic.jpg"
-import img2 from "../assets/carousal_responsive.jpg"
-import img3 from "../assets/carousal_seo.jpg"
-import img4 from "../assets/carousal_webDesign.jpg"
+import images from "../data/carousal_data"
 const Carousel=()=> {
   const [current, setCurrent] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
-  const images=[img4,img3,img2,img1]
+
   let timeOut = null;
 
   useEffect(() => {
@@ -26,7 +23,6 @@ const Carousel=()=> {
   const slideLeft = () => {
     setCurrent(current === 0 ? images.length - 1 : current - 1);
   };
-  console.log(current);
   return (
     <div
       className="carousel"
